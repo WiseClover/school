@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavlov Lyceum</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #1a237e;
+            color: white;
+            padding: 1rem;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-info {
+            text-align: right;
+        }
+
+        nav {
+            background-color: #283593;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #1a237e;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .hero {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .news-card {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .quick-link {
+            background-color: #283593;
+            color: white;
+            padding: 1rem;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .quick-link:hover {
+            background-color: #1a237e;
+        }
+
+        footer {
+            background-color: #2e87db;
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-info {
+                text-align: center;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <div>
+                    <h1>Pavlov Lyceum</h1>
+                    <p>Quality education for the future</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <p>📞 +38(099)999-99-99</p>
+                <p>📧 info@pavlivska-lyceum.ua</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Main(Ukraine)</a></li>
+                <li><a href="dos2opy.html">About the lyceum</a></li>
+                <li><a href="studentsopy.html">To the students</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Welcome to Lyceum</h2>
+            <p>Our lyceum is a modern educational institution, where every student has the opportunity to reveal his potential and get a quality education.</p>
+        </section>
+
+        <div class="quick-links">
+            <a href="ros copy.html" class="quick-link">Class schedule</a>
+            <a href="po copy.html" class="quick-link">Events</a>
+            <a href="dos2opy.html" class="quick-link">Achievement</a>
+        </div>
+
+        <h2>Latest news</h2>
+        <section class="news-grid">
+            <article class="news-card">
+                <img src="/api/placeholder/400/300" alt="Новина 1">
+                <h3>Open day</h3>
+                <p>We invite future students and their parents to an open day.</p>
+                <a href="#news2">Read more...</a>
+            </article>
+            <article class="news-card">
+                <img src="/api/placeholder/400/300" alt="Новина 2">
+                <h3>Sports achievements</h3>
+                <p>The lyceum team won the first place in the city volleyball competition.</p>
+                <a href="#news3">Read more...</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Contacts</h3>
+                <p>Address: str. Victories </p>
+                <p>Phone: 999-999-99-99</p>
+                <p>Email: info@liceum1.com</p>
+                Author of the site: Magyar Maksym
+            </div>
+            <div>
+                <h3>Useful links</h3>
+                <ul>
+                    <li><a href="studentsopy.html">Schedule</a></li>
+                    <li><a href="hadg.htm">Gallery</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Social networks</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/profile.php?id=100026247390737" target="_blank" rel="noreferrer noopener">facebook</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

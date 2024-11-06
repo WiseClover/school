@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Павлівський ліцей</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #1a237e;
+            color: white;
+            padding: 1rem;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-info {
+            text-align: right;
+        }
+
+        nav {
+            background-color: #283593;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #1a237e;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .hero {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .news-card {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .quick-link {
+            background-color: #283593;
+            color: white;
+            padding: 1rem;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .quick-link:hover {
+            background-color: #1a237e;
+        }
+
+        footer {
+            background-color: #2e87db;
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-info {
+                text-align: center;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <div>
+                    <h1>Павлівський ліцей</h1>
+                    <p>Якісна освіта для майбутнього</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <p>📞 +38(999)999-99-99</p>
+                <p>📧 info@pavlivska-lyceum.ua</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="1234eng.html">Головна(English)</a></li>
+                <li><a href="Dos.html">Про ліцей</a></li>
+                <li><a href="students.html">Учням</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Ласкаво просимо до Ліцею</h2>
+            <p>Наш ліцей - це сучасний навчальний заклад, де кожен учень має можливість розкрити свій потенціал та отримати якісну освіту.</p>
+        </section>
+
+        <div class="quick-links">
+            <a href="ros.html" class="quick-link">Розклад занять</a>
+            <a href="po.html" class="quick-link">Події</a>
+            <a href="dos2.html" class="quick-link">Досягнення</a>
+        </div>
+
+        <h2>Останні новини</h2>
+        <section class="news-grid">
+            <article class="news-card">
+                <img src="/api/placeholder/400/300" alt="Новина 1">
+                <h3>День відкритих дверей</h3>
+                <p>Запрошуємо майбутніх учнів та їх батьків на день відкритих дверей.</p>
+                <a href="#news2">Читати далі...</a>
+            </article>
+            <article class="news-card">
+                <img src="/api/placeholder/400/300" alt="Новина 2">
+                <h3>Спортивні досягнення</h3>
+                <p>Команда ліцею виборола перше місце у міських змаганнях з волейболу.</p>
+                <a href="#news3">Читати далі...</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Контакти</h3>
+                <p>Адреса: вул. Перемоги </p>
+                <p>Телефон: 999-999-99-99</p>
+                <p>Email: info@liceum1.com</p>
+                Автор сайту: Мадяр Максим
+            </div>
+            <div>
+                <h3>Корисні посилання</h3>
+                <ul>
+                    <li><a href="ros.html">Розклад</a></li>
+                    <li><a href="hadg.htm">Галерея</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Соціальні мережі</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/profile.php?id=100026247390737" target="_blank" rel="noreferrer noopener">facebook</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

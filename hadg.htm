@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея ліцея</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #333;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin-top: 30px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery .image-container {
+            overflow: hidden;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .description {
+            font-size: 16px;
+            color: #555;
+            margin-top: 10px;
+            padding: 0 15px;
+        }
+
+        /* Стилі для модального вікна */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 80%;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Галерея ліцея</h1>
+
+    <div class="gallery">
+        <div class="image-container">
+            <img src="3.jpg" alt="Фото 1" onclick="openModal(this)">
+            <div class="description">Екскурсія у карпати .</div>
+        </div>
+        <div class="image-container">
+            <img src="4.jpg" alt="Фото 2" onclick="openModal(this)">
+            <div class="description">Спокійний вигляд на гори.</div>
+        </div>
+        <div class="image-container">
+            <img src="5.jpg" alt="Фото 3" onclick="openModal(this)">
+            <div class="description">Красивий водоспад.</div>
+        </div>
+        <div class="image-container">
+            <img src="6.jpg" alt="Фото 4" onclick="openModal(this)">
+            <div class="description">У місті Володимирі відбулися змагання з футболу серед хлопців 6-х класів у рамках проєкту "Пліч-о-пліч Всеукраїнські шкільні ліги".
+                Дякуємо нашим юним спортсменам за гарну гру💛💙.</div>
+        </div>
+    </div>
+    
+
+    <!-- Модальне вікно -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Відкриття модального вікна
+        function openModal(imgElement) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src = imgElement.src;
+        }
+
+        // Закриття модального вікна
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        // Закрити модальне вікно при натисканні на темну область
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
